@@ -18,11 +18,11 @@ else
     fi
 
     echo "Installing for Ubuntu via apt-get"
-    sudo apt-get -qq update
+     apt-get -qq update
     # install Eigen 3, Boost
-    sudo apt-get --yes --force-yes install cmake libeigen3-dev libtbb-dev libboost-serialization-dev libboost-filesystem-dev libboost-test-dev libboost-program-options-dev libboost-thread-dev libboost-regex-dev
+     apt-get --yes --force-yes install cmake libeigen3-dev libtbb-dev libboost-serialization-dev libboost-filesystem-dev libboost-test-dev libboost-program-options-dev libboost-thread-dev libboost-regex-dev
     # install google tests for libcmaes
-    sudo apt-get --yes --force-yes install libgtest-dev autoconf automake libtool libgoogle-glog-dev libgflags-dev
+     apt-get --yes --force-yes install libgtest-dev autoconf automake libtool libgoogle-glog-dev libgflags-dev
 fi
 
 # save current directory
@@ -33,10 +33,10 @@ mkdir -p install
 # do libgtest fix for libcmaes (Linux only)
 if [ $OS = "Linux" ]; then
     cd /usr/src/gtest
-    sudo mkdir -p build && cd build
-    sudo cmake ..
-    sudo make
-    sudo cp *.a /usr/lib
+     mkdir -p build && cd build
+     cmake ..
+     make
+     cp *.a /usr/lib
 fi
 
 # install libcmaes
@@ -71,5 +71,5 @@ cd ../..
 
 # just as fail-safe in Linux
 if [ $OS = "Linux" ]; then
-    sudo ldconfig
+     ldconfig
 fi

@@ -97,3 +97,22 @@ We provide an implementation of Black-DROPS in python that is still in alpha ver
 - The core of the algorithm is implemented
 - Parallelization is not still working
 - Further investigation needs to be done concerning the accuracy of the GP models-->
+
+## ROSLab
+
+```
+./scripts/configure.sh
+```
+```
+./scripts/compile.sh
+```
+```
+source ./scripts/paths.sh
+```
+```
+./deps/limbo/build/exp/blackdrops/src/classic_control/cartpole_simu
+```
+```
+
+```
+
