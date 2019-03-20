@@ -121,18 +121,8 @@ cd blackdrops
 
 ## 4. Run in JupyterLab:
 ```
-./scripts/configure.sh
-```
-```
-./scripts/compile.sh
-```
-```
 source ./scripts/paths.sh
 ```
 ```
 ./deps/limbo/build/exp/blackdrops/src/classic_control/cartpole_simu
 ```
-```
-
-```
-
