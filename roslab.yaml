@@ -17,4 +17,6 @@ pip:
 custom:
   - cd $HOME/blackdrops
   - ./scripts/install_deps_req.sh
+  - ./scripts/configure.sh
+  - ./scripts/compile.sh
 
