@@ -1,5 +1,6 @@
 ## Black-DROPS algorithm
-<a href="#roslab-run"><img src="https://img.shields.io/badge/ROSLab-run-brightgreen.svg"></a>
+[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/icra2018/blackdrops.svg)](https://hub.docker.com/r/icra2018/blackdrops)
+<a href="#how-to-run-with-docker"><img src="https://img.shields.io/badge/Docker-instructions-brightgreen.svg"></a>
 
 Code for the:
 - IROS 2017 paper: "Black-Box Data-efficient Policy Search for Robotics"
@@ -99,30 +100,23 @@ We provide an implementation of Black-DROPS in python that is still in alpha ver
 - Parallelization is not still working
 - Further investigation needs to be done concerning the accuracy of the GP models-->
 
-# ROSLab Run
+# How to Run with Docker
+## Linux / macOS
+Tested on:
+* Ubuntu 16.04.6 with Docker 18.06.1-ce.
+* macOS Mojave 10.14.3 with Docker Desktop for Mac 2.0.0.3 (engine: 18.09.2)
 
-## Prerequisites:
-* [Docker](https://www.docker.com/)
-* [nvidia-docker](https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0))
-* Tested on Ubuntu Linux 16.04, Docker version 18.06.1-ce, NVIDIA Driver version 410.48.
+1. Open a terminal and run the command:
+```
+docker run --rm -p 8888:8888 icra2018/blackdrops:latest
+```
+2. Run a web browser and open the link: [http://localhost:8888/lab/tree/README.ipynb](http://localhost:8888/lab/tree/README.ipynb)
 
-## 1. Clone the repository and build ROSLab image:
+## Windows
+Tested on Windows 10 Home with Docker Toolbox (client: 18.03.0-ce, server: 18.09.3).
+1. Open Docker Quickstart Terminal and run the command:
 ```
-git clone https://github.com/ICRA-2018/blackdrops.git
-cd blackdrops
-./roslab_build
+docker run --rm -p 8888:8888 icra2018/blackdrops:latest
 ```
-## 2. Launch ROSLab image:
-```
-./roslab_run
-```
-## 3. Open JupyterLab in your browser:
-[http://localhost:8888/lab/tree/README.ipynb](http://localhost:8888/lab/tree/README.ipynb)
-
-## 4. Run in JupyterLab:
-```
-source ./scripts/paths.sh
-```
-```
-./deps/limbo/build/exp/blackdrops/src/classic_control/cartpole_simu
-```
+2. Run a web browser and open the link: [http://192.168.99.100:8888/lab/tree/README.ipynb](http://192.168.99.100:8888/lab/tree/README.ipynb)
+(if necessary, replace 192.168.99.100 with the IP address of your Docker machine, as given by the command `docker-machine ip`)
