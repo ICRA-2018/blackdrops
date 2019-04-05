@@ -1,6 +1,7 @@
 ## Black-DROPS algorithm
 [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/icra2018/blackdrops.svg)](https://hub.docker.com/r/icra2018/blackdrops)
 <a href="#how-to-run-with-docker"><img src="https://img.shields.io/badge/Docker-instructions-brightgreen.svg"></a>
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ICRA-2018/blackdrops/master?urlpath=lab%2Ftree%2FREADME.ipynb)
 
 Code for the:
 - IROS 2017 paper: "Black-Box Data-efficient Policy Search for Robotics"
