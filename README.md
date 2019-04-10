@@ -102,22 +102,13 @@ We provide an implementation of Black-DROPS in python that is still in alpha ver
 - Further investigation needs to be done concerning the accuracy of the GP models-->
 
 # How to Run with Docker
-## Linux / macOS
 Tested on:
-* Ubuntu 16.04.6 with Docker 18.06.1-ce.
-* macOS Mojave 10.14.3 with Docker Desktop for Mac 2.0.0.3 (engine: 18.09.2)
+* Ubuntu 16.04.6 with [Docker 18.06.1-ce](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+* macOS Mojave 10.14.3 with [Docker Desktop for Mac 2.0.0.3 (engine: 18.09.2)](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
+* Windows 10 Education with [Docker Desktop for Windows 2.0.0.3 (engine: 18.09.2)](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 
-1. Open a terminal and run the command:
+1. Open a terminal in Linux/macOS or a PowerShell in Windows and run the command:
 ```
 docker run --rm -p 8888:8888 icra2018/blackdrops:latest
 ```
 2. Run a web browser and open the link: [http://localhost:8888/lab/tree/README.ipynb](http://localhost:8888/lab/tree/README.ipynb)
-
-## Windows
-Tested on Windows 10 Home with Docker Toolbox (client: 18.03.0-ce, server: 18.09.3).
-1. Open Docker Quickstart Terminal and run the command:
-```
-docker run --rm -p 8888:8888 icra2018/blackdrops:latest
-```
-2. Run a web browser and open the link: [http://192.168.99.100:8888/lab/tree/README.ipynb](http://192.168.99.100:8888/lab/tree/README.ipynb)
-(if necessary, replace 192.168.99.100 with the IP address of your Docker machine, as given by the command `docker-machine ip`)
