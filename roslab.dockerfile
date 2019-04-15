@@ -59,7 +59,7 @@ RUN pip2 install  \
 
 RUN mkdir ${HOME}/blackdrops
 
-COPY . ${HOME}/blackdrops
+COPY --chown=1000:1000 . ${HOME}/blackdrops
 
 ################################### CUSTOM #####################################
 
@@ -70,8 +70,8 @@ RUN cd $HOME/blackdrops \
 
 ##################################### TAIL #####################################
 
-RUN chown -R ${NB_UID} ${HOME}
-
+RUN chown ${NB_UID} ${HOME}/blackdrops
+ 
 USER ${NB_USER}
 
 WORKDIR ${HOME}/blackdrops
